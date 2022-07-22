@@ -27,7 +27,7 @@ console.log(typeof a, typeof b, typeof c)
 console.log(person)
 console.log(prompt('enter your name,please'))
 console.log(prompt('enter your last name,please'))
-console.log(prompt('enter your age ,please'))
+console.log(+prompt('enter your age ,please'))
 
 
 // prompt('write down your name,please')
