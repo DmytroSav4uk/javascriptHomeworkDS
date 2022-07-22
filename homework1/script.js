@@ -21,17 +21,20 @@ alert(s2)
 alert(s3)
 alert(s4)
 console.log(s1, s2, s3, s4)
-console.log(person)
+document.write(s1+' '+s2+'.'+s3+'.'+s4)
 console.log(n1, n2, n3, n4, n5, n6, n7)
 console.log(typeof a, typeof b, typeof c)
+console.log(person)
 console.log(prompt('enter your name,please'))
 console.log(prompt('enter your last name,please'))
 console.log(prompt('enter your age ,please'))
-document.write(s1+' '+s2+'.'+s3+'.'+s4)
+
 
 // prompt('write down your name,please')
 // prompt('write down your middle name,please')
 // prompt('write down toy age ,please')
 
-// document.write('hello' + ',' + prompt('write down your name,please')+' '
-//     + prompt('write down your last name,please'))
+// document.write('hello' + ',' + prompt('write down your name,please')+' '+ prompt('write down your last name,please'))
+
+// document.write(n1+ n2+ n3+ n4+ n5+ n6+ n7)
+// Argument type number is not assignable to parameter type string
