@@ -2,7 +2,7 @@
 
 
 let arr = ['hello' ,12, 12.5, true, false, 'okten','Benjamin',546,-999,'JavaScript']
-
+console.log('First Task')
 console.log(arr);
 console.log(arr.length);
 
@@ -36,6 +36,7 @@ let books = [
         pageCount:5000,
         genre:'Fantasy'}
 ]
+console.log('Second Task')
 console.log(books)
 // console.log(books[1])
 // console.log(book1)
@@ -69,6 +70,7 @@ let books2 = [
             {name:'John R. R. Tolkien' , age:81}
         ]}
 ]
+console.log('Third Task')
 console.log(books2)
 
 // console.log(book3.author[0].name)
@@ -93,6 +95,7 @@ let users = [
     {name: 'Gregory',username:'King267', password:'#$@$U@(@R*TJT@'},
     {name: 'Veronika',username:'Nikusia', password:'K&#KKN#^#@IFDSOMCD(S*#)#'}
 ]
+console.log('Fourth Task')
 console.log(users[0].password)
 console.log(users[1].password)
 console.log(users[2].password)
