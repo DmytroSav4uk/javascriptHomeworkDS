@@ -1,6 +1,8 @@
 // - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
 
+
 let arr = ['hello' ,12, 12.5, true, false, 'okten','Benjamin',546,-999,'JavaScript']
+
 console.log(arr);
 console.log(arr.length);
 
@@ -69,6 +71,12 @@ let books2 = [
 ]
 console.log(books2)
 
+// console.log(book3.author[0].name)
+// console.log(book3.author[0].age)
+// console.log(book1.genre)
+// console.log(books2[1].pageCount)
+// console.log(books2[2].title)
+
 
 // Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
@@ -95,27 +103,3 @@ console.log(users[6].password)
 console.log(users[7].password)
 console.log(users[8].password)
 console.log(users[9].password)
-
-
-// let users = [
-//
-//     user1=[
-//         {name: 'Vasya'},
-//         {username:'Vasiaan221'},
-//         {password:'nkjn24g32jk423'}
-//     ],
-//     user2=[{}],
-//     user3=[{}],
-//     user4=[{}],
-//     user5=[{}],
-//     user6=[{}],
-//     user7=[{}],
-//     user8=[{}],
-//     user9=[{}],
-//     user10=[{}]
-//
-//
-// ]
-//
-// console.log(users)
-// console.log(users[0][2])
