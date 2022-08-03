@@ -238,34 +238,62 @@ let books = [
     {
         title: 'Dune',
         pageCount: 755,
-        genre: 'Science-Fiction',
-        author: [
-            {name: 'Frank Herbert', age: 66}
-        ]
+        genre: ['Science-Fiction'],
+        author: ['Frank Herbert']
     },
     {
         title: 'Toreadors from Vasyukivka',
         pageCount: 544,
-        genre: ['Adventures','For Children'],
-        author: [
-            {name: 'Vsevolod Nestayko', age: 84}
-        ]
+        genre: ['Adventures' , 'For Children'],
+        author: ['Vsevolod Nestayko', 'Bogdan' ]
     },
     {
         title: 'Lord of the Rings',
         pageCount: 5000,
-        genre: 'Fantasy',
-        author: [
-            {name: 'John R. R. Tolkien', age: 81}
-        ]
+        genre: ['Fantasy'],
+        author: ['John R. R. Tolkien']
     }
 ]
 
-console.log(Math.max(books[0].pageCount, books[1].pageCount, books[2].pageCount))
+let bookWithMaxPages = books[0];
+let bookWithMaxGenres = books[0];
+let bookWithLongestTitle = books[0];
+let bookWithTwoAuthors = books[0];
+let bookWithOneAuthor = books[0]
+
+for (const book of books) {
+    if (book.pageCount > bookWithMaxPages.pageCount) {
+        bookWithMaxPages = book;
+    }
+
+    if (book.genre.length > bookWithMaxGenres.genre.length) {
+        bookWithMaxGenres = book;
+    }
+
+    if (book.title.length > bookWithLongestTitle.title.length) {
+        bookWithLongestTitle = book;
+    }
+    if (book.author.length === 2){
+        bookWithTwoAuthors = book;
+    }
+    if (book.author.length === 1){
+        bookWithOneAuthor = book;
+    }
+
+}
+
+console.log( 'Book with max pages: ' + bookWithMaxPages.title + ' ('+ bookWithMaxPages.pageCount+' pages)');
+console.log('-------------------------')
 
 
+console.log( 'Book with max genres: ' + bookWithMaxGenres.title + ' ('+ bookWithMaxGenres.genre+')');
+console.log('-------------------------')
 
+console.log( 'Book with the longest title: ' + bookWithLongestTitle.title + '(' + bookWithLongestTitle.title.length + ')' );
+console.log('-------------------------')
 
+console.log( 'Book with the two authors: ' + bookWithTwoAuthors.title + '(' + bookWithTwoAuthors.author+ ')' );
+console.log('-------------------------')
 
-
-
+console.log( 'Book with the one author: ' + bookWithOneAuthor.title + '(' + bookWithOneAuthor.author+ ')' );
+console.log('-------------------------')
