@@ -45,13 +45,13 @@ while ( d < 20){
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-
+document.write(`<ol>`)
 for (const listOfItemskey of listOfItems) {
-   document.write(`<ul>
-<li> ${listOfItemskey} </li>
- </ul>`)
-}
 
+   document.write(`<li> ${listOfItemskey} </li>`)
+
+}
+document.write(`</ol>`)
 
 // -----------------------------------------------
 //
