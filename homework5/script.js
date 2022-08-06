@@ -14,19 +14,19 @@ console.log( 'rectangle area is:' + rectangleArea(4, b))
 
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
-let p = 3.14
 
-function circleArea(r,p){
-    let res = p * r * r ;
+
+function circleArea(r){
+    let res = Math.PI * r * r ;
     return res;
 }
-console.log('circle area is:' +circleArea(12,p))
+console.log('circle area is:' +circleArea(12))
 
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
 function cylinder( h, r){
-    let res = r* ( h * r);
+    let res = Math.PI  * 2 * ( h * r);
     return res
 }
 console.log('cylinder area is:' + cylinder(12,5) )
@@ -34,7 +34,29 @@ console.log('cylinder area is:' + cylinder(12,5) )
 
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
+
+
+let arr1 = [1,2,33,45,5494,6,7,8,9] ;
+
+function arrayElement(arr){
+    for (const arrElement of arr1 ){
+    console.log(arrElement)
+    }
+}
+arrayElement()
+
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+
+function text(text){
+    console.log(`${text}`)
+}
+
+text('Hallo , wie gehts ?')
+
+
+
+
+
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
