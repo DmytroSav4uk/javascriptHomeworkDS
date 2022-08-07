@@ -102,7 +102,7 @@ function usersOutput(userArray){
 usersOutput(usersList);
 
 // - створити функцію яка повертає найменьше число з масиву
-
+partition()
 let arrayLowestNumber = [3,2,54,6,9,7,5,3,5];
 function min(array) {
     let min = array[0];
@@ -116,7 +116,7 @@ function min(array) {
 console.log(min(arrayLowestNumber));
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
-
+partition()
 let arrayNum = [1,2,10];
 function getSum(arrayOfNumbers){
     let i = 0;
