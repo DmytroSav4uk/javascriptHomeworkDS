@@ -39,12 +39,12 @@ function arrayElement(arr){
 arrayElement([1,4,5,8,4,5,3,2,1])
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
-
+partition()
 function text(text){
     console.log(`${text}`)
 }
 text('Hallo , wie geht es ?')
-partition()
+
 
 
 
