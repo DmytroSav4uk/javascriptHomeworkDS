@@ -2,28 +2,21 @@ function partition(){
     console.log('_________________________________')
 }
 
-
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-
-
-
 
 function rectangleArea(a,b){
     return  a * b;
 }
-
 console.log( 'rectangle area is:' + rectangleArea(4, 6))
 partition()
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
-
 
 function circleArea(r){
 
     return Math.PI * r * r ;
 }
 console.log('circle area is:' +circleArea(12))
-
 partition()
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
@@ -34,9 +27,7 @@ function cylinder( h, r){
 console.log('cylinder area is:' + cylinder(12,5) )
 partition()
 
-
 // - створити функцію яка приймає масив та виводить кожен його елемент
-
 
 // let arr1 = [1,2,33,45,5494,6,7,8,9] ;
 
@@ -52,9 +43,7 @@ arrayElement([1,4,5,8,4,5,3,2,1])
 function text(text){
     console.log(`${text}`)
 }
-
 text('Hallo , wie geht es ?')
-
 partition()
 
 
@@ -87,16 +76,14 @@ partition()
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
 let array = ['hello', 'okten',123,true, false, -10];
-
 function arrayList(array){
     for (const arrayElement of array) {
         console.log(arrayElement)
         // document.write(`${arrayElement} <br>`)
     }
 }
-arrayList(array)
-
-partition()
+arrayList(array);
+partition();
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 
 
@@ -106,34 +93,36 @@ let usersList = [
     {id: 3, name: 'kolya', age: 29, status: true},
     {id: 4, name: 'olya', age: 28, status: false}
 ];
-
 function usersOutput(userArray){
     for (const userArrayElement of userArray) {
         document.write(`<div>${userArrayElement.id}:${userArrayElement.name} ${userArrayElement.age}</div>`)
-        console.log(userArrayElement)
+        console.log(userArrayElement);
     }
 }
-
 usersOutput(usersList);
-
-
 
 // - створити функцію яка повертає найменьше число з масиву
 
-let arrayLowestNumber = [1,2,54,6,9,7,5,3,5];
-
-function lowestNumber(array){
-    for (const arrayElement of array) {
-    if (arrayElement < array.length ){
-
-
-
-
+let arrayLowestNumber = [3,2,54,6,9,7,5,3,5];
+function min(array) {
+    let min = array[0];
+    for (let arrayElement of array) {
+    if ( min > arrayElement ){
+        min = arrayElement;
     }
     }
+    return min;
 }
-
-lowestNumber(arrayLowestNumber)
-
+console.log(min(arrayLowestNumber));
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+
+let arrayNum = [1,2,10];
+function getSum(arrayOfNumbers){
+    let i = 0;
+    for (const number of arrayOfNumbers) {
+        i += number;
+    }
+return i ;
+}
+console.log(getSum(arrayNum))
