@@ -76,7 +76,6 @@ function createElement(useOwnDiv, parent, tag,innerText,className) {
         div = document.createElement('div');
         div.classList.add('boxInner');
     }
-
     let ele = document.createElement(tag);
     if(innerText!=null)
         ele.innerText = innerText;
@@ -106,13 +105,8 @@ for (const course of coursesArray) {
     div.appendChild(ul);
     for (const module of course.modules) {
        createElement(false, ul,'li', module);
-
-
     }
-
-
     target.appendChild(div);
-
 }
 
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
