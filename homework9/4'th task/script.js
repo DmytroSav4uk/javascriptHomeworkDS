@@ -50,8 +50,6 @@ for (const element of coursesAndDurationArray){
 // -----------
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
 
-
-
 let a = document.createElement('h1');
 a.innerText = 'Text that will disappear';
 a.id = 'text'
@@ -65,8 +63,58 @@ button.onclick = function() {
 }
 
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-//
-//
+
+let input = document.createElement('input');
+input.id = 'age';
+let button1 = document.createElement('button');
+button1.innerText = 'send';
+input.placeholder = 'enter your age';
+document.body.appendChild(input);
+document.body.appendChild(button1);
+button1.onclick = function (){
+   // console.log(document.getElementById('age').value);
+if (document.getElementById('age').value >= 18){
+    alert('you are big guy!')}
+    else{
+        alert('you are kleiner Kinder');
+    }
+};
+
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
+let inputHeight = document.createElement('input');
+let inputWidth = document.createElement('input');
+let inputContent = document.createElement('input');
+let buttonTable = document.createElement('button');
+inputHeight.placeholder = 'enter row value';
+inputWidth.placeholder = 'enter column value';
+inputContent.placeholder = 'enter content';
+buttonTable.innerText = 'Send info';
+document.body.appendChild(inputHeight);
+document.body.appendChild(inputWidth);
+document.body.appendChild(inputContent);
+document.body.appendChild(buttonTable);
+
+
+buttonTable.onclick = function CreateTable() {
+    let myTableDiv = document.getElementById("table");
+    let table = document.createElement('TABLE');
+    table.border = '10';
+    let tableBody = document.createElement('TBODY');
+    table.appendChild(tableBody);
+
+    for (let i = 0; i < inputHeight.value; i++) {
+        let tr = document.createElement('TR');
+        tableBody.appendChild(tr);
+
+        for (let j = 0; j < inputWidth.value; j++) {
+            let td = document.createElement('TD');
+            td.width = '75';
+            td.appendChild(document.createTextNode( `${inputContent.value}` + i + "," + j));
+            tr.appendChild(td);
+        }
+    }
+    myTableDiv.appendChild(table);
+}
