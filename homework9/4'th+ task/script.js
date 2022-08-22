@@ -112,7 +112,7 @@ buttonTable.onclick = function CreateTable() {
         for (let j = 0; j < inputWidth.value; j++) {
             let td = document.createElement('TD');
             td.width = '75';
-            td.appendChild(document.createTextNode( `${inputContent.value}` + i + "," + j));
+            td.appendChild(document.createTextNode( `${inputContent.value}`+' '+ i + "," + j));
             tr.appendChild(td);
         }
     }
