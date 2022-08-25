@@ -3,10 +3,14 @@
 // 2 Вивести id,name всіх user в index.html. Окремий блок для кожного user.
 // 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули
 
+
+
+
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users =>{
        for (const user of users) {
+            let father = document.getElementById('father')
             let userDiv = document.createElement('div');
             userDiv.classList.add('user');
             let userText = document.createElement('h1');
@@ -16,6 +20,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             let button = document.createElement("button");
             button.innerHTML = '<a href="user-details.html">Click for more info</a>';
             userDiv.appendChild(button);
+            father.appendChild(userDiv)
         }
     })
 
