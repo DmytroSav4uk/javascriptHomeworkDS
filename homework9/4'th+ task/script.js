@@ -118,3 +118,6 @@ buttonTable.onclick = function CreateTable() {
     }
     myTableDiv.appendChild(table);
 }
+
+
+
