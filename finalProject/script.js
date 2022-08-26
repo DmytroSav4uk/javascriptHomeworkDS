@@ -3,9 +3,6 @@
 // 2 Вивести id,name всіх user в index.html. Окремий блок для кожного user.
 // 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули
 
-
-
-
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users =>{
@@ -18,20 +15,17 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userDiv.appendChild(userText);
             document.body.append(userDiv);
             let button = document.createElement("button");
-            button.innerHTML = '<a href="user-details.html">Click for more info</a>';
+            // button.innerHTML = `<a href="user-details.html?id = ${user.id}& data = ${JSON.stringify(user)}">Click for more info</a>`;
+            let a = document.createElement('a');
+            a.innerText = 'Click for more info';
+            a.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
+            // & data = ${JSON.stringify(user)}`;
+            button.appendChild(a)
             userDiv.appendChild(button);
             father.appendChild(userDiv)
         }
     })
 
-
-
-// На странице user-details.html:
-// 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
-// 5 Додати кнопку "post of current user", при кліку на яку, з'являються title всіх постів поточного юзера
-// (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
-//     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html, котра має детальну інфу про поточний пост.
-//
 //     На странице post-details.html:
 // 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
 // 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
