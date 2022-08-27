@@ -109,11 +109,12 @@ let id = url.searchParams.get('id');
 
 
         let button = document.createElement("button");
-        let a = document.createElement('a');
-        a.innerText = 'posts of current user';
-        a.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
+        //let a = document.createElement('a');
+            button.innerText = 'posts of current user';
+        // a.innerText = 'posts of current user';
+        // a.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
         userDiv.appendChild(button)
-        button.appendChild(a);
+        // button.appendChild(a);
 
         button.onclick = () => {
 

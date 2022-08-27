@@ -15,6 +15,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userDiv.appendChild(userText);
             document.body.append(userDiv);
             let button = document.createElement("button");
+            button.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
             // button.innerHTML = `<a href="user-details.html?id = ${user.id}& data = ${JSON.stringify(user)}">Click for more info</a>`;
             let a = document.createElement('a');
             a.innerText = 'Click for more info';
