@@ -71,7 +71,7 @@ let post = +url.searchParams.get('post');
 
                     }
 
-                    window.setTimeout( () =>{commentsDiv.className = 'commentsFull';}, 50);
+                    window.setTimeout( () =>{commentsDiv.className = 'commentsFull';}, 100);
         }))
 
 

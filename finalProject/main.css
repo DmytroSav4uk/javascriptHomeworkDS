@@ -95,7 +95,7 @@ h3 {
 
 
 #postsFull{
-    width: 570px;
+    width: 600px;
     height: 320px;
     max-height: 320px;
     overflow: hidden;
@@ -168,11 +168,12 @@ button:hover {
     display: flex;
     flex-wrap:wrap ;
     justify-content: center;
+    align-items: center;
 }
 
 .innerEle{
     width: 45%;
-    height: 20%;
+    height: 30%;
     border-radius: 10px;
     text-align: center;
     border: 1px solid #2f1496;
