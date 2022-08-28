@@ -1,11 +1,17 @@
+body {
+    font-family: Calibri;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
 
-
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.user{
+.user {
     border: 1px solid black;
     width: 49.6%;
     display: flex;
@@ -14,30 +20,37 @@ a{
     font-size: 10px;
 }
 
-#father{
+#father {
     margin: auto;
     display: flex;
-    flex-wrap:wrap ;
+    flex-wrap: wrap;
     width: 700px;
     height: 700px;
     /*border: 1px solid black;*/
 }
 
-
-#father1{
+#father1 {
     margin: auto;
     width: 1000px;
 }
 
+#father2{
+    border: 1px solid black;
+    font-size: 20px;
+    width: 200px;
+    height: 200px;
 
-h3{
+}
+
+
+h3 {
     margin: 5px;
 }
 
-.user1{
+.user1 {
 
     border: 1px solid black;
-    width:860px;
+    width: 860px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -45,7 +58,7 @@ h3{
     font-size: 15px;
 }
 
-.innerDiv{
+.innerDiv {
 
     display: flex;
     flex-direction: column;
@@ -53,28 +66,46 @@ h3{
     justify-content: center;
 }
 
-button{
-    border-radius:10px ;
+button {
+    border-radius: 10px;
     border: 1px solid white;
     background: none;
     width: 90%;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-button:hover{
-background: rgba(255, 255, 255, 0.18);
+button:hover {
+    background: rgba(255, 255, 255, 0.18);
 
 }
 
-#postButton{
+#postButton {
     width: auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.post{
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
+.comment{
 
-body {
-    font-family: Calibri;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
+
+    width: 700px;
+}
+
+.innerEle{
+
+    text-align: left;
+    border: 1px solid black;
 }

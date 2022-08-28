@@ -15,22 +15,16 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userDiv.appendChild(userText);
             document.body.append(userDiv);
             let button = document.createElement("button");
-            button.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
-            // button.innerHTML = `<a href="user-details.html?id = ${user.id}& data = ${JSON.stringify(user)}">Click for more info</a>`;
-            let a = document.createElement('a');
-            a.innerText = 'Click for more info';
-            a.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
-            // & data = ${JSON.stringify(user)}`;
-            button.appendChild(a)
+            button.onclick = () => {
+                 location.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
+            };
+            button.innerText = 'Click for more info';
             userDiv.appendChild(button);
             father.appendChild(userDiv)
         }
     })
 
-//     На странице post-details.html:
-// 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
-// 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
-//
+
 // Стилизація проєкта -
 // index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.
 //     user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.

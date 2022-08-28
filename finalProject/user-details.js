@@ -7,9 +7,7 @@
 let url = new URL(location.href);
 let id = url.searchParams.get('id');
 
-
 (fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-
 
     .then(response => response.json())
     .then(user => {
@@ -110,7 +108,7 @@ let id = url.searchParams.get('id');
 
         let button = document.createElement("button");
         //let a = document.createElement('a');
-            button.innerText = 'posts of current user';
+        button.innerText = 'posts of current user';
         // a.innerText = 'posts of current user';
         // a.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
         userDiv.appendChild(button)
@@ -124,21 +122,18 @@ let id = url.searchParams.get('id');
                     let ul = document.createElement('ul');
 
                     for (const post of posts) {
-                        let a = document.createElement('a');
-                        a.innerText = ' more'
-                        a.href = `post-details.html?data = ${JSON.stringify(post)}`;
                         let li = document.createElement('li');
                         li.innerText = post.title;
-
                         let postButton = document.createElement('button')
-                        postButton.appendChild(a)
-                            postButton.id = 'postButton'
+                        postButton.innerText = ' more';
+                        postButton.id = 'postButton'
+                        postButton.onclick = () => {
+                            location.href = `post-details.html?id=${user.id}&post = ${post.id}`
+                        }
 
                         li.appendChild(postButton)
                         ul.appendChild(li)
                     }
-
-                    // document.body.appendChild(ul);
                     userDiv.appendChild(ul);
 
 
