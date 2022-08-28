@@ -105,22 +105,23 @@ let id = url.searchParams.get('id');
         bs.innerText = 'bs: ' + user.company.bs;
         companyDiv.appendChild(bs);
 
-
         let button = document.createElement("button");
-        //let a = document.createElement('a');
         button.innerText = 'posts of current user';
-        // a.innerText = 'posts of current user';
-        // a.href = `user-details.html?id=${user.id}&data=${JSON.stringify(user)}`;
+        button.classList.add('postOfUser')
         userDiv.appendChild(button)
-        // button.appendChild(a);
+
+
+
 
         button.onclick = () => {
+
 
             (fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
                 .then(response => response.json())
                 .then(posts => {
                     let ul = document.createElement('ul');
-
+                    let ulDiv = document.createElement('div');
+                    ulDiv.id = 'posts';
                     for (const post of posts) {
                         let li = document.createElement('li');
                         li.innerText = post.title;
@@ -129,16 +130,29 @@ let id = url.searchParams.get('id');
                         postButton.id = 'postButton'
                         postButton.onclick = () => {
                             location.href = `post-details.html?id=${user.id}&post = ${post.id}`
+
+
+
+
+
+
+
+
+
+
+
                         }
 
                         li.appendChild(postButton)
                         ul.appendChild(li)
                     }
-                    userDiv.appendChild(ul);
+                    userDiv.appendChild(ulDiv);
+                    ulDiv.appendChild(ul);
+
+                    window.setTimeout( () =>{ulDiv.id = 'postsFull';}, 100);
 
 
                 }))
-
             button.onclick = () =>
                 this.disabled = 'disabled';
 
@@ -146,5 +160,4 @@ let id = url.searchParams.get('id');
 
 
     }))
-
 

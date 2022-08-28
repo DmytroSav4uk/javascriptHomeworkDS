@@ -22,6 +22,11 @@ let post = +url.searchParams.get('post');
         let body = document.createElement('p');
         title.innerText = post.title;
         body.innerText=post.body;
+
+        title.classList.add('title');
+        body.classList.add('text')
+
+
         document.body.appendChild(father);
         father.appendChild(div);
         div.appendChild(title);
@@ -31,6 +36,11 @@ let post = +url.searchParams.get('post');
         let button = document.createElement('button')
         button.innerText = 'Show comments'
         div.appendChild(button);
+
+
+
+
+
 
 
         button.onclick = () =>{
@@ -61,7 +71,7 @@ let post = +url.searchParams.get('post');
 
                     }
 
-
+                    window.setTimeout( () =>{commentsDiv.className = 'commentsFull';}, 50);
         }))
 
 

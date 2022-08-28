@@ -1,9 +1,26 @@
 body {
     font-family: Calibri;
+    color: #2f1496;
+
+}
+
+
+.user, .user1 , .post {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 a {
@@ -12,20 +29,30 @@ a {
 }
 
 .user {
-    border: 1px solid black;
-    width: 49.6%;
+    color: #2f1496;
+    border-radius: 10px;
+    width: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
     font-size: 10px;
+    transition: all .2s ease-in-out;
 }
+
+
+.user:hover, .innerDiv:hover{
+    transform: scale(1.1);
+}
+
 
 #father {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    width: 700px;
+    width: 850px;
     height: 700px;
+
+    gap: 30px;
     /*border: 1px solid black;*/
 }
 
@@ -49,17 +76,40 @@ h3 {
 
 .user1 {
 
-    border: 1px solid black;
+    border-radius: 10px;
     width: 860px;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     font-size: 15px;
 }
 
-.innerDiv {
 
+#posts {
+
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+
+}
+
+
+#postsFull{
+    width: 570px;
+    height: 320px;
+    max-height: 320px;
+    overflow: hidden;
+    transition: height 0.4s linear;
+}
+
+
+.postOfUser{
+    margin-top: 10px;
+}
+
+.innerDiv {
+    color: #2f1496;
+    transition: all .2s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,26 +118,28 @@ h3 {
 
 button {
     border-radius: 10px;
-    border: 1px solid white;
-    background: none;
+border: none;
+    background-color: rgba(176, 0, 176, 0.1);
     width: 90%;
     cursor: pointer;
     margin-bottom: 10px;
+    transition: all .2s ease-in-out;
 }
 
 button:hover {
-    background: rgba(255, 255, 255, 0.18);
-
+    background: rgba(176, 0, 176);
+    transform: scale(1.1);
 }
 
 #postButton {
+    margin-left: 10px;
     width: auto;
     cursor: pointer;
     margin-bottom: 10px;
 }
 
 .post{
-    border: 1px solid black;
+    border: 1px solid #2f1496;
     width: 100%;
     height: auto;
     display: flex;
@@ -98,14 +150,59 @@ button:hover {
 }
 
 
-.comment{
+.comment {
+
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+
+}
 
 
-    width: 700px;
+.commentsFull{
+    width: 100%;
+    height: 800px;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: height 0.4s linear;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
 }
 
 .innerEle{
+    width: 45%;
+    height: 20%;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2f1496;
+    margin: 10px;
+}
 
-    text-align: left;
-    border: 1px solid black;
+
+.innerEle:hover{
+    color: #23a6d5;
+    background-color: rgba(176, 0, 176);
+    transition: all .3s ease-in-out;
+    transform: scale(1.1);
+    border: none;
+    border-radius: 40px;
+}
+
+.post{
+    border-radius:10px ;
+text-align: center;
+}
+
+.title, .text{
+    transition: all .3s ease-in-out;
+    transform: scale(0.9);
+
+}
+
+.title:hover{
+    transform: scale(1);
+}
+.text:hover{
+    transform: scale(1.1);
 }
