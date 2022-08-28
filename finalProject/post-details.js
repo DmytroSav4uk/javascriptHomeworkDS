@@ -21,7 +21,7 @@ let post = +url.searchParams.get('post');
         let title = document.createElement('h1');
         let body = document.createElement('p');
         title.innerText = post.title;
-        body.innerText=post.body;
+        body.innerText = post.body;
 
         title.classList.add('title');
         body.classList.add('text')
@@ -32,18 +32,11 @@ let post = +url.searchParams.get('post');
         div.appendChild(title);
         div.appendChild(body);
 
-
         let button = document.createElement('button')
         button.innerText = 'Show comments'
         div.appendChild(button);
 
-
-
-
-
-
-
-        button.onclick = () =>{
+        button.onclick = () => {
             (fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
 
                 .then(pComments => pComments.json())
@@ -68,13 +61,16 @@ let post = +url.searchParams.get('post');
                         let userComment = document.createElement('p');
                         userComment.innerText = comment.body;
                         innerDiv.appendChild(userComment);
-
                     }
+                    window.setTimeout(() => {
+                        commentsDiv.className = 'commentsFull';
+                    }, 100);
 
-                    window.setTimeout( () =>{commentsDiv.className = 'commentsFull';}, 100);
-        }))
+                    button.onclick = () =>{
+                        this.disabled = 'disabled';
+                }
 
-
-
-    }}))
+                }))
+        }
+    }))
 

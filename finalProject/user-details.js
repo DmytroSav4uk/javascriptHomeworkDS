@@ -110,9 +110,6 @@ let id = url.searchParams.get('id');
         button.classList.add('postOfUser')
         userDiv.appendChild(button)
 
-
-
-
         button.onclick = () => {
 
 
@@ -130,17 +127,6 @@ let id = url.searchParams.get('id');
                         postButton.id = 'postButton'
                         postButton.onclick = () => {
                             location.href = `post-details.html?id=${user.id}&post = ${post.id}`
-
-
-
-
-
-
-
-
-
-
-
                         }
 
                         li.appendChild(postButton)
@@ -150,14 +136,8 @@ let id = url.searchParams.get('id');
                     ulDiv.appendChild(ul);
 
                     window.setTimeout( () =>{ulDiv.id = 'postsFull';}, 100);
-
-
                 }))
             button.onclick = () =>
                 this.disabled = 'disabled';
-
         }
-
-
     }))
-
