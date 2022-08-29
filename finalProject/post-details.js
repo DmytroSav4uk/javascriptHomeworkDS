@@ -7,7 +7,7 @@ let url = new URL(location.href);
 let id = url.searchParams.get('id');
 let post = +url.searchParams.get('post');
 //console.log(post);
-
+//(fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts/${post}`)
 
 (fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
 

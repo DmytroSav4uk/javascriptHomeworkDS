@@ -1,6 +1,7 @@
 body {
     font-family: Calibri;
     color: #2f1496;
+    font-weight: bold;
 
 }
 
@@ -173,9 +174,13 @@ button:hover {
     width: 45%;
     height: 30%;
     border-radius: 10px;
-    text-align: center;
+    /*text-align: center;*/
     border: 1px solid #2f1496;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
